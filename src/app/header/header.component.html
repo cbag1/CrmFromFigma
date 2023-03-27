@@ -1,0 +1,87 @@
+<div class="relative header font-sans">
+  <div class="relative menu flex flex-wrap w-full px-36 pt-4 justify-between bg-[#285430]">
+    <div class="">
+      <div class=" relative flex flex-wrap gap-10">
+        <div class="logo pt-5 pb-5">
+          <img src="{{logo}}" alt="">
+        </div>
+        <div class="hamburger pt-5 sm:visible md:hidden">
+          <svg fill="white" viewBox="0 0 50 80" width="40" height="30">
+            <rect width="100" height="10"></rect>
+            <rect y="30" width="100" height="10"></rect>
+            <rect y="60" width="100" height="10"></rect>
+          </svg>
+        </div>
+        <div class="flex navbar text-white font-semibold font-{16} gap-6">
+          <div class="item relative pt-5 pb-5">
+            <a [ngClass]="{'active': isActive('/#user'), 'inactive': !isActive('/#user')}" href="#user">Users</a>
+          </div>
+          <div class="item relative pt-5 pb-5">
+            <a [ngClass]="{'active': isActive('/#patients'), 'inactive': !isActive('/#patients')}"
+              href="/#patients">Patients</a>
+          </div>
+          <div class="item relative pt-5 pb-5">
+            <a [ngClass]="{'active': isActive('/#hospitals'), 'inactive': !isActive('/#hospitals')}"
+              href="#hospitals">Hospitals</a>
+          </div>
+          <div class="item relative pt-5 pb-5">
+            <a [ngClass]="{'active': isActive('/#notice'), 'inactive': !isActive('/#notice')}" href="#notice">Notice</a>
+          </div>
+          <div class="item relative  pt-5 pb-5">
+            <a [ngClass]="{'active': isActive('/#help'), 'inactive': !isActive('/#help')}" href="#help">Help Center</a>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class=" text-white">
+
+      <div class="flex items-center  justify-end flex-wrap gap-10">
+        <div class="item">
+          <a href="#"><img src="{{layout_block}}" alt=""></a>
+        </div>
+        <div class="item">
+          <a href="#"><img src="{{equalizer}}" alt=""></a>
+        </div>
+        <div class="item">
+          <a href="#"><img src="{{group_chat}}" alt=""></a>
+        </div>
+        <div class="flex justify-center items-center gap-3">
+          <div class="item text-right">
+            <span class="block font-semibold text-[12]">Marvin McKinney</span>
+            <span class="text-[12] font-light">Admin</span>
+          </div>
+
+          <div class="item">
+            <a href="#"><span class="font-medium text-2xl px-3 py-1 rounded-lg bg-white bg-opacity-10">M</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-menu px-36 py-6 bg-white drop-shadow-sm">
+    <div class="flex items-center gap-8 text-[#C9C9C9] ">
+      <div class="item text-[#5F8D4E] font-semibold bg-[#F4FFF3] px-8 py-1">
+        <a href="#">
+          Doctor
+        </a>
+      </div>
+      <div class="item">
+        <a href="#">
+          Administration
+        </a>
+      </div>
+      <div class="item">
+        <a href="#">
+          Accounts
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="list-table">
+
+  </div>
+</div>

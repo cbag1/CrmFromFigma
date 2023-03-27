@@ -1,0 +1,34 @@
+.navbar .item a {
+  /* transition: background-color 0.1s; */
+}
+.navbar .item  a.active {
+  color: #285430;
+  padding: 21px 40px;
+  background-color: white;
+  border-radius: 15px;
+}
+.navbar .item a.active::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -30px;
+  width: 30px;
+  height: 30px;
+  background-color: #285430;
+  border-radius: 50%;
+  box-shadow:  -15px 15px 0  white;
+}
+
+
+.navbar .item a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+  width: 30px;
+  height: 30px;
+  background-color: #285430;
+  border-radius: 50%;
+  box-shadow:  15px 15px 0  white;
+
+}
