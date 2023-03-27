@@ -12,7 +12,7 @@
             <rect y="60" width="100" height="10"></rect>
           </svg>
         </div>
-        <div class="flex navbar text-white font-semibold font-{16} gap-6">
+        <div class="flex navbar text-white font-semibold text-[16px] gap-6">
           <div class="item relative pt-5 pb-5">
             <a [ngClass]="{'active': isActive('/#user'), 'inactive': !isActive('/#user')}" href="#user">Users</a>
           </div>
@@ -49,8 +49,8 @@
         </div>
         <div class="flex justify-center items-center gap-3">
           <div class="item text-right">
-            <span class="block font-semibold text-[12]">Marvin McKinney</span>
-            <span class="text-[12] font-light">Admin</span>
+            <span class="block font-semibold text-[12px]">Marvin McKinney</span>
+            <span class="text-[12px] font-light">Admin</span>
           </div>
 
           <div class="item">
@@ -62,8 +62,8 @@
   </div>
 
   <div class="sub-menu px-36 py-6 bg-white drop-shadow-sm">
-    <div class="flex items-center gap-8 text-[#C9C9C9] ">
-      <div class="item text-[#5F8D4E] font-semibold bg-[#F4FFF3] px-8 py-1">
+    <div class="flex text-[14px] items-center gap-8 text-[#C9C9C9] ">
+      <div class="item  text-[#5F8D4E] font-semibold bg-[#F4FFF3] px-8 py-1">
         <a href="#">
           Doctor
         </a>
@@ -81,7 +81,80 @@
     </div>
   </div>
 
-  <div class="list-table">
+  <div class="list-table bg-white py-5 px-8 mx-36 mt-16 rounded-lg">
+    <div class="table-title flex flex-wrap justify-between mb-6">
+      <div>
+        <h4 class="text-[18px] font-medium">List of doctors</h4>
+        <span class="text-[12px] text-[#B5B5C3]">345 availables doctors</span>
+      </div>
+      <div class="add">
+        <div class="button text-white flex flex-wrap gap-2 px-4 py-4 items-center rounded-lg bg-[#5F8D4E]">
+          <img src="{{add_user}}" alt="">
+          <span class="text-[12px] font-semibold">add new doctor</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-auto">
+      <table class="w-full">
+        <thead class="w-full text-left bg-[#FAFAFA]">
+          <tr class="py-10 text-[12px] text-[#B5B5C3]">
+            <th class="py-4">Name</th>
+            <th class="py-4">ID</th>
+            <th class="py-4">Email</th>
+            <th class="py-4">Phone number</th>
+            <th class="py-4">Date Added</th>
+            <th class="py-4">STATUS</th>
+            <th> </th>
+          </tr>
+        </thead>
+
+        <tbody class="text-[14px] font-semibold">
+
+          <tr class="" *ngFor="let i of [1, 2, 3, 4, 5]">
+            <td class="flex gap-4 py-5">
+              <div class="avatar w-8 rounded-lg flex justify-center items-center bg-[#F3F6F9]">
+                <img class="w-3/5" src="{{avatar1 }}" alt="">
+              </div>
+              <div>
+                <div class="name">
+                  Brooklyn Simmons
+                </div>
+                <div class="job text-[13px] font-medium text-[#B5B5C3]">
+                  Dermatologists
+                </div>
+              </div>
+            </td>
+
+            <td class="py-5">
+              87364523
+            </td>
+            <td class="py-5">
+              brooklyns@mail.com
+            </td>
+            <td class="py-5">
+              (603) 555-0123
+            </td>
+            <td class="py-5">
+              <div class="date">
+                21/12/2022
+              </div>
+              <div class="time text-[13px] font-medium text-[#B5B5C3]">
+                10:40 PM
+              </div>
+            </td>
+            <td class="py-5">
+              <span class="bg-[#F4FFF3] text-[11px] font-medium px-3 rounded-lg  text-[#5F8D4E]">Approved</span>
+            </td>
+            <td class="py-5">
+              <img src="{{right}}" alt="">
+            </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
 
   </div>
 </div>
